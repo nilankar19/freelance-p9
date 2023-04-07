@@ -3,11 +3,19 @@ import Image from "next/image";
 import { Poppins } from "next/font/google";
 import styles from "@component/styles/Home.module.css";
 import Header from "@component/component/Header";
-import { Box } from "@mui/material";
-
+import { Box, Container } from "@mui/material";
+import Indtroduction from "@component/component/introduction";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import FeaturesCardList from "@component/component/Features";
+import Challenge from "@component/component/Challenge";
+import Career from "@component/component/career";
 const Poppin = Poppins({ weight: "500", subsets: ["devanagari"] });
 
 export default function Home() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <>
       <Head>
@@ -17,15 +25,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${Poppin.className}`}>
-        <header>
-          <Header></Header>
-        </header>
+
+        {/* section 1 */}
+        <Header></Header>
+
         <Box
           component={"img"}
           sx={{ maxWidth: "100%", width: "100%" }}
           alt="profession"
           src="Line.svg  "
         ></Box>
+        {/* section 2 */}
+
+        <div className={!isMobile?'introduction':"mintroduction"}>
+          <img src="Vector 7.png" className={!isMobile?'arrow':'marrow'}  alt="" />
+
+          <Indtroduction />
+        </div>
+        <FeaturesCardList ></FeaturesCardList>
+        <Challenge></Challenge>
+        <Career></Career>
       </main>
     </>
   );
