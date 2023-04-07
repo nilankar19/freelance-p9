@@ -15,14 +15,14 @@ export default function Indtroduction() {
       className="introduction-main">
       <div  style={{ marginTop:'10%',display: "flex",flexDirection: isMobile?'column-reverse':'row',justifyContent:'space-evenly' }}>
         {/* col - 1 */}
-        <Container component={'div'}  sx={{position:'relative', width:'80%',marginTop:isMobile?'80%':''}}>
+        <Container component={'div'}  sx={{position:'relative', width:'80%',marginTop:isMobile?'106%':''}}>
         <Button
   sx={{
     border: '2px solid #0AB2EA',
     borderRadius: "20px",
     paddingLeft: "16px",
-    width:'141px',
-    height:'36px',
+    width:isMobile?'79px':'141px',
+    height:isMobile?'25px':'36px',
     paddingRight: "10px",
     display: "flex",
     flexDirection: ["row"],
@@ -37,7 +37,7 @@ export default function Indtroduction() {
   <Typography component={'div'} sx={{
     marginLeft: ["0", "10px"],
     fontWeight:'300',
-    fontSize:'16px',
+    fontSize:isMobile?'10px':'20px',
     textTransform: 'none'
   }}>
     Trusted
@@ -45,7 +45,7 @@ export default function Indtroduction() {
 </Button>
 
 
-           <Typography variant="h2" component="div" sx={{fontWeight:'600'}}>Data that's <br/> Professional .</Typography>
+           <Typography variant="h2" component="div" sx={{fontWeight:'600',fontSize:isMobile?'44px':'80px'}}>Data that's <br/> Professional.</Typography>
            <Typography  variant="h6" component="div">
              If trading is a profession,then your data needs to be <br/> professional too.
 

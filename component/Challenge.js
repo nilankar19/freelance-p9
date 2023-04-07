@@ -101,7 +101,7 @@ export default function Challenge(params) {
             flexDirection="column"
             justifyContent="center"
             height="100%"
-           sx={{width:'80%'}}
+           sx={{width:isMobile?'100%':'80%',padding:isMobile?'2%':''}}
           >
             <Typography
               variant="h1"
@@ -126,11 +126,13 @@ export default function Challenge(params) {
               variant="body1"
               sx={{
                 mb: isMobile ? "20px" : "40px",
+                fontSize:isMobile?'12px':'',
+
               }}
             >
              {!isMobile?`If finance is your challenge then finance can’t challenge, if you
                  are a part of trading as profession. we are there to support you.
-                  To know more about how we can help you.`:'We believe in Doing, not in saying'}
+                  To know more about how we can help you.`:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna alias Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.'}
             </Typography>
             <Button
               variant="contained"
