@@ -1,15 +1,17 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import { Poppins } from "next/font/google";
 import styles from "@component/styles/Home.module.css";
 import Header from "@component/component/Header";
-import { Box, Container } from "@mui/material";
+import { Box, Card, CardMedia, Container } from "@mui/material";
 import Indtroduction from "@component/component/introduction";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import FeaturesCardList from "@component/component/Features";
 import Challenge from "@component/component/Challenge";
 import Career from "@component/component/career";
+import Image from "next/image";
+import "../public/greenarrow.png";
 const Poppin = Poppins({ weight: "500", subsets: ["devanagari"] });
 
 export default function Home() {
@@ -34,19 +36,21 @@ export default function Home() {
           alt="profession"
           src="Line.svg  "
         ></Box>
-        {/* section 2 */}
-
-        <div className={!isMobile ? "introduction" : "mintroduction"}>
+        <Card>
           <img
-            src="Vector 7.png"
-            className={!isMobile ? "arrow" : "marrow"}
-            alt=""
-          />
-
-          <Indtroduction />
-        </div>
-        <FeaturesCardList></FeaturesCardList>
-        <Challenge></Challenge>
+            src="/greenarrow.png"
+            alt="image description"
+            style={{
+              width: "100vw",
+              height: "1000px",
+              position: "absolute",
+              objectFit: "contain",
+            }}
+          ></img>
+          <Indtroduction></Indtroduction>
+        </Card>
+         <FeaturesCardList></FeaturesCardList>
+         <Challenge></Challenge>
         <Career></Career>
       </main>
     </>
