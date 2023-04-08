@@ -19,12 +19,18 @@ export default function Dualimgcard() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-
   return (
-    <div style={{ position: "absolute", top: "10%",right:'10%' }}>
-       <img src="DashboardL.png"  alt="a" className={isMobile ?'mimglight1': 'imglight1'} />
-            <img src="DashboardD.png"  alt="w" className={isMobile ?'mimgdark2':'imgdark2'}/>
-
+    <div style={{ position: "absolute", top: "10%", right: "10%" }}>
+      <img
+        src="DashboardL.png"
+        alt="a"
+        className={isMobile ? "mimglight1" : "imglight1"}
+      />
+      <img
+        src="DashboardD.png"
+        alt="w"
+        className={isMobile ? "mimgdark2" : "imgdark2"}
+      />
     </div>
   );
 }

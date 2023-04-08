@@ -74,16 +74,15 @@ export default function Challenge(params) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const handleClick = (e) => {
-
-    switch(e.target.value){
-        case 'CTA':
-            window.location.assign('/')
-            break;
-        case 'Connect Now':
-            window.location.assign('/')
-            break;
-        default:
-          break;
+    switch (e.target.value) {
+      case "CTA":
+        window.location.assign("/");
+        break;
+      case "Connect Now":
+        window.location.assign("/");
+        break;
+      default:
+        break;
     }
   };
 
@@ -101,13 +100,16 @@ export default function Challenge(params) {
             flexDirection="column"
             justifyContent="center"
             height="100%"
-           sx={{width:isMobile?'100%':'80%',padding:isMobile?'2%':''}}
+            sx={{
+              width: isMobile ? "100%" : "80%",
+              padding: isMobile ? "2%" : "",
+            }}
           >
             <Typography
               variant="h1"
               sx={{
                 fontStyle: "normal",
-                fontWeight: '600',
+                fontWeight: "600",
 
                 fontSize: isMobile ? "32px" : "52px",
                 lineHeight: isMobile ? "44px" : "1",
@@ -116,23 +118,29 @@ export default function Challenge(params) {
                 padding: isMobile ? "2%" : "",
               }}
             >
-{!isMobile ? (<span>Finance can’t hold <span></span> you back now.'</span>) :
-  <span>We believe in <span style={{color: 'blue'}}>Doing</span>, not in saying.</span>}
-
-
-
+              {!isMobile ? (
+                <span>
+                  Finance can’t hold <span></span> you back now.'
+                </span>
+              ) : (
+                <span>
+                  We believe in <span style={{ color: "blue" }}>Doing</span>,
+                  not in saying.
+                </span>
+              )}
             </Typography>
             <Typography
               variant="body1"
               sx={{
                 mb: isMobile ? "20px" : "40px",
-                fontSize:isMobile?'12px':'',
-
+                fontSize: isMobile ? "12px" : "",
               }}
             >
-             {!isMobile?`If finance is your challenge then finance can’t challenge, if you
+              {!isMobile
+                ? `If finance is your challenge then finance can’t challenge, if you
                  are a part of trading as profession. we are there to support you.
-                  To know more about how we can help you.`:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna alias Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.'}
+                  To know more about how we can help you.`
+                : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna alias Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed."}
             </Typography>
             <Button
               variant="contained"
@@ -140,23 +148,19 @@ export default function Challenge(params) {
               sx={{
                 width: "200px",
                 height: "50px",
-                background:
-                  "linear-gradient(180deg, #0AB2EA 0%, #0489B5 115%)",
+                background: "linear-gradient(180deg, #0AB2EA 0%, #0489B5 115%)",
                 boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.25)",
                 borderRadius: "8px",
                 fontWeight: "600",
                 fontSize: "14px",
                 color: "white",
                 mt: isMobile ? "20px" : "40px",
-              }
-
-            }
+              }}
             >
-              {!isMobile?'Connect Now':'CTA'}
+              {!isMobile ? "Connect Now" : "CTA"}
             </Button>
           </Box>
         </Grid>
-
       </Grid>
     </Box>
   );

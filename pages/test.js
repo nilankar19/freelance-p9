@@ -1,5 +1,5 @@
 import { Button, Container, Typography } from "@mui/material";
-import '../public/DashboardD.png'
+import "../public/DashboardD.png";
 
 export default function Indtroduction() {
   return (
@@ -9,8 +9,6 @@ export default function Indtroduction() {
     >
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* col - 1 */}
-
-
 
         {/* col - 2 */}
         <Container
@@ -52,21 +50,11 @@ export default function Indtroduction() {
           }}
         >
           <div className="imgContainer">
-            <img
-              className="img1"
-              src="DashboardD.png"
-              alt="img1"
-            />
-            <img
-              className="img2"
-              src="DashboardL.png"
-              alt="img2"
-            />
+            <img className="img1" src="DashboardD.png" alt="img1" />
+            <img className="img2" src="DashboardL.png" alt="img2" />
           </div>
         </Container>
       </div>
     </Container>
   );
 }
-
-

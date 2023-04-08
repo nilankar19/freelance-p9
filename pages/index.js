@@ -25,7 +25,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${Poppin.className}`}>
-
         {/* section 1 */}
         <Header></Header>
 
@@ -37,12 +36,16 @@ export default function Home() {
         ></Box>
         {/* section 2 */}
 
-        <div className={!isMobile?'introduction':"mintroduction"}>
-          <img src="Vector 7.png" className={!isMobile?'arrow':'marrow'}  alt="" />
+        <div className={!isMobile ? "introduction" : "mintroduction"}>
+          <img
+            src="Vector 7.png"
+            className={!isMobile ? "arrow" : "marrow"}
+            alt=""
+          />
 
           <Indtroduction />
         </div>
-        <FeaturesCardList ></FeaturesCardList>
+        <FeaturesCardList></FeaturesCardList>
         <Challenge></Challenge>
         <Career></Career>
       </main>
