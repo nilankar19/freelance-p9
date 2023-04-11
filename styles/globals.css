@@ -42,7 +42,7 @@
 
 .imglight1 {
   position: absolute;
-  width: 99%;
+  width: 40vw;
   top: 40px;
   right: 20%;
 
@@ -79,9 +79,9 @@
 }
 
 .duoimg {
-  width: 40%;
+  width: 60%;
   height: 100px;
-  border: 1px solid blue;
+
 }
 
 .mduoimg {
@@ -107,7 +107,7 @@
   left: -85px;
   z-index: 1;
   top: 164px;
-  border: 1px solid red;
+
 
 }
 
@@ -133,7 +133,8 @@ body {
 
 body {
   color: black);
-  background: white
+  background: white;
+  overflow-x: hidden;
 }
 
 a {

@@ -12,44 +12,52 @@ const cardsData = [
 
 const Cards = ({ isMobile }) => {
   const cards = cardsData.map((card, index) => (
-    <Grid item xs={12} sm={6} md={3} key={index}>
-      <Card sx={{
-        height: isMobile ? '100%' : '290px',
+
+      <div style={{
+        // height: isMobile ? '100%' : '290px',
+        marginLeft:'2%',
+        marginTop:isMobile?'4 %':0,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'flex-start',
+        justifyContent:'flex-end',
         background: 'linear-gradient(98.05deg, #0AB2EA 5.59%, #6F0478 296.05%)',
         borderRadius: '8px',
-        width: isMobile ? '100%' : '290px',
-        margin: 'auto'
+        padding:'2%',
+        paddingTop:'6%'
+
+
+
+        // width: isMobile ? '100%' : '290px',
+
+
       }}>
-        <CardContent sx={{ flexGrow: 1 }}>
-          <Typography variant="h5" component="h2" gutterBottom sx={{
+        <div style={{ display:'flex',flexDirection:'column',justifyContent:'end'}}>
+          <div  style={{
             fontStyle: 'normal',
             fontWeight: '600',
-            fontSize: '28px',
-            lineHeight: '42px',
+            fontSize:isMobile?'5vw':'2vw',
             color: '#FFFFFF',
-            width: '100%',
-            textAlign: 'start',
-            marginTop: isMobile ? '20px' : '40%'
+
+
+            // marginTop: '20%'
           }}>
             {card.title}
-          </Typography>
-          <Typography variant="body1" component="p" sx={{
-            width: '100%',
-            height: '72px',
+          </div>
+          <div style={{
+
+
             color: '#FFFFFF',
             textAlign: 'start',
-            marginTop: isMobile ? '10px' : '20px'
+            // marginTop: isMobile ? '10px' : '20px'
+            fontSize:isMobile?'2vw':'1.2vw'
           }}>
             {card.content}
-          </Typography>
-        </CardContent>
-      </Card>
-    </Grid>
+          </div>
+        </div>
+      </div>
+
   ));
-  return cards;
+  return <div style={{display:'flex',flexDirection: isMobile?'column':'row', padding:'3%'}}>{cards}</div>
 };
 
 const FeaturesCardList = () => {
@@ -57,9 +65,7 @@ const FeaturesCardList = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Grid container spacing={2} sx={{ marginTop: "10%", paddingLeft: isMobile ? '5%' : '3%', paddingRight: isMobile ? '5%' : '0' }}>
-      <Cards isMobile={isMobile} />
-    </Grid>
+    <Cards isMobile={isMobile}/>
   );
 };
 

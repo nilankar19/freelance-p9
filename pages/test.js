@@ -5,7 +5,7 @@ export default function Indtroduction() {
   return (
     <Container
       maxWidth="md"
-      sx={{ border: "1px solid green", padding: "10px", width: "100%" }}
+      sx={{ border: "1px solid green", padding: "10px", width: "100%",overflowX:'hidden' }}
     >
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* col - 1 */}
