@@ -7,7 +7,7 @@ export default function Career() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <div sx={{ flexGrow: 1 ,overflowX:'hidden'}}>
+    <div sx={{ flexGrow: 1, overflowX: "hidden" }}>
       <Grid container direction="column" alignItems="center">
         <Grid item xs={12}>
           <Typography

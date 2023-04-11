@@ -36,24 +36,24 @@ export default function Home() {
           alt="profession"
           src="Line.svg  "
         ></Box>
-        <Card sx={{boxShadow:'none'}}>
+        <Card sx={{ boxShadow: "none" }}>
           <img
             src="/greenarrow.png"
             alt="image description"
             style={{
               width: "100vw",
-              paddingRight:'10%',
+              paddingRight: "10%",
               position: "absolute",
               objectFit: "contain",
-              top:isMobile?'40%':null,
-              display:isMobile?'none':'block'
+              top: isMobile ? "40%" : null,
+              display: isMobile ? "none" : "block",
             }}
           ></img>
 
           <Indtroduction></Indtroduction>
         </Card>
-         <FeaturesCardList></FeaturesCardList>
-         <Challenge></Challenge>
+        <FeaturesCardList></FeaturesCardList>
+        <Challenge></Challenge>
         <Career></Career>
       </main>
     </>

@@ -1,4 +1,3 @@
-
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Box, Grid, Typography, Button } from "@mui/material";
@@ -21,10 +20,14 @@ export default function Challenge(params) {
   };
 
   return (
-    <Box sx={{ marginTop: "14%",paddingLeft:isMobile?'20px':'100px',  }}>
+    <Box sx={{ marginTop: "14%", paddingLeft: isMobile ? "20px" : "100px" }}>
       <Grid container spacing={2}>
         {!isMobile && (
-          <Grid item xs={6} sx={{ position: "relative",display:'flex',padding:'10%'}}>
+          <Grid
+            item
+            xs={6}
+            sx={{ position: "relative", display: "flex", padding: "10%" }}
+          >
             <Dualimgcard sx={{ width: "100%" }} />
           </Grid>
         )}
@@ -68,7 +71,7 @@ export default function Challenge(params) {
               sx={{
                 mb: isMobile ? "20px" : "40px",
                 fontSize: isMobile ? "12px" : "",
-                paddingLeft:isMobile?'10px':null
+                paddingLeft: isMobile ? "10px" : null,
               }}
             >
               {!isMobile
