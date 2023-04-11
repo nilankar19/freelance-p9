@@ -61,6 +61,7 @@ export default function Indtroduction({ children }) {
                 position: "absolute",
                 objectFit: "cover",
                 top: "-54px",
+                zIndex:'1',
                 // top:isMobile?'40%':null,
                 display: isMobile ? "block" : "none",
               }}

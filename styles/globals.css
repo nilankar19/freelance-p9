@@ -136,7 +136,16 @@ body {
   background: white;
   overflow-x: hidden;
 }
+body::-webkit-scrollbar{
+  background-color: rgb(34, 175, 210);
+  width: 10px;
+  
 
+}
+body::-webkit-scrollbar-thumb{
+  background: white;
+ border-radius: 50px;
+}
 a {
   color: inherit;
   text-decoration: none;
